@@ -8,7 +8,7 @@ public class Character {
 	}
 	
 	public String fight() {
-		System.out.println("FIGHT!!!");
+//		System.out.println("FIGHT!!!");
 		waffenEigenschaft.useWeapon();
 		return null;
 	}
@@ -25,5 +25,7 @@ public class Character {
 		waffenEigenschaft = currentWeapon;
 		this.currentWeapon = currentWeapon;
 	}
-	
+	public void anzeigen() {
+		System.out.println("See Basic Character");
+	}
 }
