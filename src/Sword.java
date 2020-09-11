@@ -7,4 +7,10 @@ public class Sword implements WeaponBehavior{
 		return null;
 	}
 
+	@Override
+	public String waffeAnzeigen() {
+		String anzeigen = "src\\res\\sword.png";
+		return anzeigen;
+	}
+
 }

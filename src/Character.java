@@ -25,7 +25,8 @@ public class Character {
 		waffenEigenschaft = currentWeapon;
 		this.currentWeapon = currentWeapon;
 	}
-	public void anzeigen() {
+	public String anzeigen() {
 		System.out.println("See Basic Character");
+		return null;
 	}
 }

@@ -7,4 +7,10 @@ public class BowAndArrow implements WeaponBehavior {
 		return null;
 	}
 
+	@Override
+	public String waffeAnzeigen() {
+		String anzeigen = "src\\res\\bow.jpg";
+		return anzeigen;
+	}
+
 }

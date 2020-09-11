@@ -7,7 +7,9 @@ public class Knight extends Character {
 	}
 	
 	@Override
-	public void anzeigen() {
+	public String anzeigen() {
 		System.out.println("See a Knight");
+		String anzeigen = "src\\res\\knight.jpg";
+		return anzeigen;
 	}
 }

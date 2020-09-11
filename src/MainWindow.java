@@ -2,10 +2,12 @@ import java.awt.EventQueue;
 import java.util.concurrent.ThreadLocalRandom;
 
 import javax.swing.JFrame;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.Choice;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import javax.swing.JLabel;
 
 public class MainWindow {
 
@@ -48,6 +50,22 @@ public class MainWindow {
 		frmRpgfightsim.getContentPane().setLayout(null);
 		
 
+		JLabel lblCharImageA = new JLabel("");
+		lblCharImageA.setBounds(25, 25, 369, 350);
+		frmRpgfightsim.getContentPane().add(lblCharImageA);
+		
+		JLabel lblCharImageB = new JLabel("");
+		lblCharImageB.setBounds(452, 25, 369, 350);
+		frmRpgfightsim.getContentPane().add(lblCharImageB);
+		
+		JLabel lblWeaponSlotA = new JLabel("");
+		lblWeaponSlotA.setBounds(25, 408, 300, 60);
+		frmRpgfightsim.getContentPane().add(lblWeaponSlotA);
+		
+		JLabel lblWeaponSlotB = new JLabel("");
+		lblWeaponSlotB.setBounds(520, 408, 300, 60);
+		frmRpgfightsim.getContentPane().add(lblWeaponSlotB);
+		
 		
 		Choice choiceClassA = new Choice();
 		choiceClassA.setBounds(25, 489, 127, 20);
@@ -62,13 +80,13 @@ public class MainWindow {
 		frmRpgfightsim.getContentPane().add(choiceWeaponA);
 		
 		Choice choiceClassB = new Choice();
-		choiceClassB.setBounds(509, 489, 127, 20);
+		choiceClassB.setBounds(520, 489, 127, 20);
 		choiceClassB.add("Knight");
 		choiceClassB.add("Troll");
 		frmRpgfightsim.getContentPane().add(choiceClassB);
 		
 		Choice choiceWeaponB = new Choice();
-		choiceWeaponB.setBounds(656, 489, 127, 20);
+		choiceWeaponB.setBounds(693, 489, 127, 20);
 		choiceWeaponB.add("Sword");
 		choiceWeaponB.add("Bow and Arrow");
 		frmRpgfightsim.getContentPane().add(choiceWeaponB);
@@ -101,12 +119,13 @@ public class MainWindow {
 					currentCharacterA = new Troll(currentWeapon);
 				}
 				System.out.println("Player I chose "+ selectionClass +" with " + selectionWeapon + "!");
-				currentCharacterA.anzeigen();
+				lblCharImageA.setIcon(new ImageIcon(currentCharacterA.anzeigen()));
+				lblWeaponSlotA.setIcon(new ImageIcon(currentWeapon.waffeAnzeigen()));
 			}
 		});
 		
 		
-		btnConfirmA.setBounds(93, 535, 147, 23);
+		btnConfirmA.setBounds(101, 535, 147, 23);
 		frmRpgfightsim.getContentPane().add(btnConfirmA);
 		
 		JButton btnConfirmB = new JButton("Confirm Player II");
@@ -136,12 +155,13 @@ public class MainWindow {
 					currentCharacterB = new Troll(currentWeapon);
 				}
 				System.out.println("Player I chose "+ selectionClass +" with " + selectionWeapon + "!");
-				currentCharacterB.anzeigen();
+				lblCharImageB.setIcon(new ImageIcon(currentCharacterB.anzeigen()));
+				lblWeaponSlotB.setIcon(new ImageIcon(currentWeapon.waffeAnzeigen()));
 				
 			}
 		});
 		
-		btnConfirmB.setBounds(579, 535, 147, 23);
+		btnConfirmB.setBounds(603, 535, 147, 23);
 		frmRpgfightsim.getContentPane().add(btnConfirmB);
 				
 		
@@ -160,17 +180,26 @@ public class MainWindow {
 				
 				if(rollA>rollB) {
 					System.out.println("Player I WINS");
+					lblCharImageB.setIcon(new ImageIcon("src\\res\\skull.png"));
 				}
 				if(rollA==rollB) {
 					System.out.println("Both Players DIED");
+					lblCharImageA.setIcon(new ImageIcon("src\\res\\skull.png"));
+					lblCharImageB.setIcon(new ImageIcon("src\\res\\skull.png"));
 				}
 				if(rollA<rollB) {
 					System.out.println("Player II WINS");
+					lblCharImageA.setIcon(new ImageIcon("src\\res\\skull.png"));
 				}
 			}
 		});
-		btnStartFight.setBounds(362, 517, 89, 61);
+		btnStartFight.setBounds(375, 516, 89, 61);
 		frmRpgfightsim.getContentPane().add(btnStartFight);
+		
+
+		
+		
+		
 		
 	}
 }

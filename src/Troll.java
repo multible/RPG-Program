@@ -6,8 +6,10 @@ public class Troll extends Character {
 		// TODO Auto-generated constructor stub
 	}
 	@Override
-	public void anzeigen() {
+	public String anzeigen() {
 		System.out.println("See a Troll");
+		String anzeigen = "src\\res\\troll.jpg";
+		return anzeigen;
 	}
 
 }
