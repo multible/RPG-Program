@@ -1,6 +1,6 @@
 
 public class Character {
-	private String currentWeapon;
+	private WeaponBehavior currentWeapon;
 	private WeaponBehavior waffenEigenschaft;
 	
 	public Character(WeaponBehavior wb) {
@@ -9,11 +9,21 @@ public class Character {
 	
 	public String fight() {
 		System.out.println("FIGHT!!!");
+		waffenEigenschaft.useWeapon();
 		return null;
 	}
 	
-	public void setWeapon(WeaponBehavior wb) {
-		waffenEigenschaft = wb;
+//	public void setWeapon(WeaponBehavior wb) {
+//		waffenEigenschaft = wb;
+//	}
+
+	public WeaponBehavior getCurrentWeapon() {
+		return currentWeapon;
+	}
+
+	public void setCurrentWeapon(WeaponBehavior currentWeapon) {
+		waffenEigenschaft = currentWeapon;
+		this.currentWeapon = currentWeapon;
 	}
 	
 }

@@ -5,10 +5,4 @@ public class Knight extends Character {
 		super(wb);
 		// TODO Auto-generated constructor stub
 	}
-	public String fight() {
-		System.out.println("fight like a knight");
-		return null;
-		
-	}
-
 }
