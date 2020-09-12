@@ -12,4 +12,9 @@ public class Knight extends Character {
 		String anzeigen = "src\\res\\knight.jpg";
 		return anzeigen;
 	}
+	
+	public String getRole() {
+		String knightRole = "Knight";
+		return knightRole;
+	}
 }

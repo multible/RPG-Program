@@ -3,10 +3,10 @@ public class Main {
 
 	public static void main(String[] args) {
 		Character knight = new Knight(new Sword());
-		knight.fight();
+		knight.fight("deine mutter");
 		
 		knight.setCurrentWeapon(new BowAndArrow());
 		
-		knight.fight();
+		knight.fight("deinen vater");
 	}
 }

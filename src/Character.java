@@ -7,9 +7,9 @@ public class Character {
 		waffenEigenschaft = wb;
 	}
 	
-	public String fight() {
+	public String fight(String target) {
 //		System.out.println("FIGHT!!!");
-		waffenEigenschaft.useWeapon();
+		waffenEigenschaft.useWeapon(target);
 		return null;
 	}
 	

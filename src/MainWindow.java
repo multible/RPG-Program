@@ -11,7 +11,10 @@ import javax.swing.JLabel;
 
 public class MainWindow {
 
-	static WeaponBehavior currentWeapon = null;
+	static String selectionClassB = null;
+	static String selectionClassA = null;
+	static WeaponBehavior currentWeaponA = null;
+	static WeaponBehavior currentWeaponB = null;
 	static Character currentCharacterA = null;
 	static Character currentCharacterB = null;
 	private JFrame frmRpgfightsim;
@@ -97,30 +100,30 @@ public class MainWindow {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				
-				String selectionClass = choiceClassA.getSelectedItem();
-				String selectionWeapon = choiceWeaponA.getSelectedItem();				
+				selectionClassA = choiceClassA.getSelectedItem();
+				String selectionWeaponA = choiceWeaponA.getSelectedItem();				
 				
-				if(selectionWeapon == "Sword") {
+				if(selectionWeaponA == "Sword") {
 					
-					currentWeapon = new Sword();
-					
-				}
-				if(selectionWeapon == "Bow and Arrow") {
-					
-					currentWeapon = new BowAndArrow();
+					currentWeaponA = new Sword();
 					
 				}
-				if(selectionClass == "Knight" )
+				if(selectionWeaponA == "Bow and Arrow") {
+					
+					currentWeaponA = new BowAndArrow();
+					
+				}
+				if(selectionClassA == "Knight" )
 				{
-					currentCharacterA = new Knight(currentWeapon);
+					currentCharacterA = new Knight(currentWeaponA);
 				}
-				if(selectionClass == "Troll" )
+				if(selectionClassA == "Troll" )
 				{
-					currentCharacterA = new Troll(currentWeapon);
+					currentCharacterA = new Troll(currentWeaponA);
 				}
-				System.out.println("Player I chose "+ selectionClass +" with " + selectionWeapon + "!");
+				System.out.println("Player I chose "+ selectionClassA +" with " + selectionWeaponA + "!");
 				lblCharImageA.setIcon(new ImageIcon(currentCharacterA.anzeigen()));
-				lblWeaponSlotA.setIcon(new ImageIcon(currentWeapon.waffeAnzeigen()));
+				lblWeaponSlotA.setIcon(new ImageIcon(currentWeaponA.waffeAnzeigen()));
 			}
 		});
 		
@@ -133,30 +136,30 @@ public class MainWindow {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				
-				String selectionClass = choiceClassB.getSelectedItem();
-				String selectionWeapon = choiceWeaponB.getSelectedItem();				
+				selectionClassB = choiceClassB.getSelectedItem();
+				String selectionWeaponB = choiceWeaponB.getSelectedItem();				
 				
-				if(selectionWeapon == "Sword") {
+				if(selectionWeaponB == "Sword") {
 					
-					currentWeapon = new Sword();
-					
-				}
-				if(selectionWeapon == "Bow and Arrow") {
-					
-					currentWeapon = new BowAndArrow();
+					currentWeaponB = new Sword();
 					
 				}
-				if(selectionClass == "Knight" )
+				if(selectionWeaponB == "Bow and Arrow") {
+					
+					currentWeaponB = new BowAndArrow();
+					
+				}
+				if(selectionClassB == "Knight" )
 				{
-					currentCharacterB = new Knight(currentWeapon);
+					currentCharacterB = new Knight(currentWeaponB);
 				}
-				if(selectionClass == "Troll" )
+				if(selectionClassB == "Troll" )
 				{
-					currentCharacterB = new Troll(currentWeapon);
+					currentCharacterB = new Troll(currentWeaponB);
 				}
-				System.out.println("Player I chose "+ selectionClass +" with " + selectionWeapon + "!");
+				System.out.println("Player I chose "+ selectionClassB +" with " + selectionWeaponB + "!");
 				lblCharImageB.setIcon(new ImageIcon(currentCharacterB.anzeigen()));
-				lblWeaponSlotB.setIcon(new ImageIcon(currentWeapon.waffeAnzeigen()));
+				lblWeaponSlotB.setIcon(new ImageIcon(currentWeaponB.waffeAnzeigen()));
 				
 			}
 		});
@@ -171,8 +174,8 @@ public class MainWindow {
 			public void mouseClicked(MouseEvent e) {
 				
 				System.out.println("Fight Started!");
-				currentCharacterA.fight();
-				currentCharacterB.fight();
+				currentCharacterA.fight(selectionClassA);
+				currentCharacterB.fight(selectionClassB);
 				int rollA = ThreadLocalRandom.current().nextInt(1, 100 + 1);
 				int rollB = ThreadLocalRandom.current().nextInt(1, 100 + 1);
 				System.out.println("rollA: " + rollA);

@@ -2,8 +2,8 @@
 public class BowAndArrow implements WeaponBehavior {
 
 	@Override
-	public String useWeapon() {
-		System.out.println("Shoots arrows at this motherfucker");
+	public String useWeapon(String target) {
+		System.out.println("Shoots arrows at " + target + ", this motherfucker");
 		return null;
 	}
 
