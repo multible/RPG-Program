@@ -21,7 +21,7 @@ public class Sword implements WeaponBehavior{
 
 	@Override
 	public String holster() {
-		System.out.println("Holster Bow and Arrows!");
+		System.out.println("Holster Sword!");
 		return null;
 	}
 

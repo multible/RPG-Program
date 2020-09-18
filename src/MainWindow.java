@@ -169,7 +169,7 @@ public class MainWindow {
 				{
 					currentCharacterB = new Troll(currentWeaponB);
 				}
-				System.out.println("Player I chose "+ selectionClassB +" with " + selectionWeaponB + "!");
+				System.out.println("Player II chose "+ selectionClassB +" with " + selectionWeaponB + "!");
 				lblCharImageB.setIcon(new ImageIcon(currentCharacterB.anzeigen()));
 				lblWeaponSlotB.setIcon(new ImageIcon(currentWeaponB.waffeAnzeigen()));
 				
