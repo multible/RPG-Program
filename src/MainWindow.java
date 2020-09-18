@@ -80,6 +80,7 @@ public class MainWindow {
 		choiceWeaponA.setBounds(186, 489, 127, 20);
 		choiceWeaponA.add("Sword");
 		choiceWeaponA.add("Bow and Arrow");
+		choiceWeaponA.add("No Weapon");
 		frmRpgfightsim.getContentPane().add(choiceWeaponA);
 		
 		Choice choiceClassB = new Choice();
@@ -92,6 +93,7 @@ public class MainWindow {
 		choiceWeaponB.setBounds(693, 489, 127, 20);
 		choiceWeaponB.add("Sword");
 		choiceWeaponB.add("Bow and Arrow");
+		choiceWeaponB.add("No Weapon");
 		frmRpgfightsim.getContentPane().add(choiceWeaponB);
 			
 		
@@ -111,6 +113,11 @@ public class MainWindow {
 				if(selectionWeaponA == "Bow and Arrow") {
 					
 					currentWeaponA = new BowAndArrow();
+					
+				}
+				if(selectionWeaponA == "No Weapon") {
+					
+					currentWeaponA = new NoWeapon();
 					
 				}
 				if(selectionClassA == "Knight" )
@@ -147,6 +154,11 @@ public class MainWindow {
 				if(selectionWeaponB == "Bow and Arrow") {
 					
 					currentWeaponB = new BowAndArrow();
+					
+				}
+				if(selectionWeaponB == "No Weapon") {
+					
+					currentWeaponB = new NoWeapon();
 					
 				}
 				if(selectionClassB == "Knight" )

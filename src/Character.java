@@ -9,7 +9,11 @@ public class Character {
 	
 	public String fight(String target) {
 //		System.out.println("FIGHT!!!");
-		waffenEigenschaft.useWeapon(target);
+		waffenEigenschaft.draw();
+		for(int i=0;i<5;i++) {
+			waffenEigenschaft.useWeapon(target);
+		}
+		waffenEigenschaft.holster();
 		return null;
 	}
 	

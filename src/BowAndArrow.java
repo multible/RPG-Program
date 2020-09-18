@@ -13,4 +13,16 @@ public class BowAndArrow implements WeaponBehavior {
 		return anzeigen;
 	}
 
+	@Override
+	public String draw() {
+		System.out.println("Draw Bow and Arrows!");
+		return null;
+	}
+
+	@Override
+	public String holster() {
+		System.out.println("Holster Bow and Arrows!");
+		return null;
+	}
+
 }

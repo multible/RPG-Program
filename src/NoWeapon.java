@@ -1,9 +1,9 @@
 
-public class Sword implements WeaponBehavior{
+public class NoWeapon implements WeaponBehavior{
 
 	@Override
 	public String useWeapon(String target) {
-		System.out.println("Hits " + target +" with a Sword");
+		System.out.println("Slaps " + target +" in the face!");
 		return null;
 	}
 
@@ -15,13 +15,13 @@ public class Sword implements WeaponBehavior{
 
 	@Override
 	public String draw() {
-		System.out.println("Draw Sword!");
+		System.out.println("Make fist");
 		return null;
 	}
 
 	@Override
 	public String holster() {
-		System.out.println("Holster Bow and Arrows!");
+		System.out.println("Put fist in pocket!");
 		return null;
 	}
 
