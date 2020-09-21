@@ -5,8 +5,10 @@ public class Main {
 		Character knight = new Knight(new Sword());
 		knight.fight("deine mutter");
 		
-		knight.setCurrentWeapon(new BowAndArrow());
+		knight.setCurrentWeapon(new NoWeapon());
 		
 		knight.fight("deinen vater");
+		
+		knight.getCurrentWeapon().useWeapon("deine oma");
 	}
 }
