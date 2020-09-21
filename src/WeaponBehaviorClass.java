@@ -1,14 +1,14 @@
 
 public abstract class WeaponBehaviorClass {
 	
-	 abstract void strike();
-	 abstract void aim();
+	 abstract void strike(String target);
+	 abstract void aim(String target);
 	 abstract void prepare();
 	
-	public final void useWeapon() {
+	public final void useWeapon(String target) {
 		prepare();
-		aim();
-		strike();
+		aim(target);
+		strike(target);
 		System.out.println("useWeapon abstrakte basisklasse");
 	}
 
