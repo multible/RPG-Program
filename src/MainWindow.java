@@ -13,10 +13,13 @@ public class MainWindow {
 
 	static String selectionClassB = null;
 	static String selectionClassA = null;
+	
 	static WeaponBehavior currentWeaponA = null;
 	static WeaponBehavior currentWeaponB = null;
+	
 	static Character currentCharacterA = null;
 	static Character currentCharacterB = null;
+	
 	private JFrame frmRpgfightsim;
 
 	/**
@@ -144,31 +147,24 @@ public class MainWindow {
 			public void mouseClicked(MouseEvent e) {
 				
 				selectionClassB = choiceClassB.getSelectedItem();
-				String selectionWeaponB = choiceWeaponB.getSelectedItem();				
+				String selectionWeaponB = choiceWeaponB.getSelectedItem();
 				
-				if(selectionWeaponB == "Sword") {
-					
+				
+				switch(selectionWeaponB) {
+				case "Sword":
 					currentWeaponB = new Sword();
-					
-				}
-				if(selectionWeaponB == "Bow and Arrow") {
-					
+				case "Bow and Arrow":
 					currentWeaponB = new BowAndArrow();
-					
-				}
-				if(selectionWeaponB == "No Weapon") {
-					
+				case "No Weapon":
 					currentWeaponB = new NoWeapon();
-					
 				}
-				if(selectionClassB == "Knight" )
-				{
+				switch(selectionClassB) {
+				case "Knight":
 					currentCharacterB = new Knight(currentWeaponB);
-				}
-				if(selectionClassB == "Troll" )
-				{
+				case "Troll":
 					currentCharacterB = new Troll(currentWeaponB);
 				}
+				
 				System.out.println("Player II chose "+ selectionClassB +" with " + selectionWeaponB + "!");
 				lblCharImageB.setIcon(new ImageIcon(currentCharacterB.anzeigen()));
 				lblWeaponSlotB.setIcon(new ImageIcon(currentWeaponB.waffeAnzeigen()));
