@@ -84,6 +84,7 @@ public class MainWindow {
 		choiceWeaponA.add("Sword");
 		choiceWeaponA.add("Bow and Arrow");
 		choiceWeaponA.add("No Weapon");
+		choiceWeaponA.add("Frost Staff");
 		frmRpgfightsim.getContentPane().add(choiceWeaponA);
 		
 		Choice choiceClassB = new Choice();
@@ -97,6 +98,7 @@ public class MainWindow {
 		choiceWeaponB.add("Sword");
 		choiceWeaponB.add("Bow and Arrow");
 		choiceWeaponB.add("No Weapon");
+		choiceWeaponB.add("Frost Staff");
 		frmRpgfightsim.getContentPane().add(choiceWeaponB);
 			
 		
@@ -115,6 +117,8 @@ public class MainWindow {
 					currentWeaponA = new BowAndArrow();
 				case "No Weapon":
 					currentWeaponA = new NoWeapon();
+				case "Frost Staff":
+					currentWeaponA = new FrostStaff();
 				}
 				switch(selectionClassA) {
 				case "Knight":
@@ -147,6 +151,8 @@ public class MainWindow {
 					currentWeaponB = new BowAndArrow();
 				case "No Weapon":
 					currentWeaponB = new NoWeapon();
+				case "Frost Staff":
+					currentWeaponB = new FrostStaff();
 				}
 				switch(selectionClassB) {
 				case "Knight":
