@@ -22,19 +22,15 @@ public class Sword extends WeaponBehaviorClass implements WeaponBehavior{
 	@Override
 	void strike(String target) {
 		System.out.println("Hits " + target +" with a Sword");
-		
 	}
 
 	@Override
 	void aim(String target) {
-		System.out.println("Aims at " + target +" with a Sword");
-		
+		System.out.println("Aims at " + target +" with a Sword");	
 	}
 
 	@Override
 	void prepare() {
-		System.out.println("Fondles the blade");
-		
+		System.out.println("Fondles the blade");	
 	}
-
 }

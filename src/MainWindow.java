@@ -108,27 +108,18 @@ public class MainWindow {
 				selectionClassA = choiceClassA.getSelectedItem();
 				String selectionWeaponA = choiceWeaponA.getSelectedItem();				
 				
-				if(selectionWeaponA == "Sword") {
-					
+				switch(selectionWeaponA) {
+				case "Sword":
 					currentWeaponA = new Sword();
-					
-				}
-				if(selectionWeaponA == "Bow and Arrow") {
-					
+				case "Bow and Arrow":
 					currentWeaponA = new BowAndArrow();
-					
-				}
-				if(selectionWeaponA == "No Weapon") {
-					
+				case "No Weapon":
 					currentWeaponA = new NoWeapon();
-					
 				}
-				if(selectionClassA == "Knight" )
-				{
+				switch(selectionClassA) {
+				case "Knight":
 					currentCharacterA = new Knight(currentWeaponA);
-				}
-				if(selectionClassA == "Troll" )
-				{
+				case "Troll":
 					currentCharacterA = new Troll(currentWeaponA);
 				}
 				System.out.println("Player I chose "+ selectionClassA +" with " + selectionWeaponA + "!");
@@ -149,7 +140,6 @@ public class MainWindow {
 				selectionClassB = choiceClassB.getSelectedItem();
 				String selectionWeaponB = choiceWeaponB.getSelectedItem();
 				
-				
 				switch(selectionWeaponB) {
 				case "Sword":
 					currentWeaponB = new Sword();
@@ -168,7 +158,6 @@ public class MainWindow {
 				System.out.println("Player II chose "+ selectionClassB +" with " + selectionWeaponB + "!");
 				lblCharImageB.setIcon(new ImageIcon(currentCharacterB.anzeigen()));
 				lblWeaponSlotB.setIcon(new ImageIcon(currentWeaponB.waffeAnzeigen()));
-				
 			}
 		});
 		
@@ -205,12 +194,6 @@ public class MainWindow {
 			}
 		});
 		btnStartFight.setBounds(375, 516, 89, 61);
-		frmRpgfightsim.getContentPane().add(btnStartFight);
-		
-
-		
-		
-		
-		
+		frmRpgfightsim.getContentPane().add(btnStartFight);			
 	}
 }

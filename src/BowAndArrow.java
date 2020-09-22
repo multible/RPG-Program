@@ -22,19 +22,15 @@ public class BowAndArrow extends WeaponBehaviorClass implements WeaponBehavior {
 	@Override
 	void strike(String target) {
 		System.out.println("Shoots arrows at " + target + ", this motherfucker");
-		
 	}
 
 	@Override
 	void aim(String target) {
 		System.out.println("Aims with arrows at " + target + ", this motherfucker");
-		
 	}
 
 	@Override
 	void prepare() {
 		System.out.println("Reloads arrows");
-		
 	}
-
 }
