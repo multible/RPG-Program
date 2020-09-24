@@ -113,18 +113,24 @@ public class MainWindow {
 				switch(selectionWeaponA) {
 				case "Sword":
 					currentWeaponA = new Sword();
+					break;
 				case "Bow and Arrow":
 					currentWeaponA = new BowAndArrow();
+					break;
 				case "No Weapon":
 					currentWeaponA = new NoWeapon();
+					break;
 				case "Frost Staff":
 					currentWeaponA = new FrostStaff();
+					break;
 				}
 				switch(selectionClassA) {
 				case "Knight":
 					currentCharacterA = new Knight(currentWeaponA);
+					break;
 				case "Troll":
 					currentCharacterA = new Troll(currentWeaponA);
+					break;
 				}
 				System.out.println("Player I chose "+ selectionClassA +" with " + selectionWeaponA + "!");
 				lblCharImageA.setIcon(new ImageIcon(currentCharacterA.anzeigen()));
@@ -147,20 +153,25 @@ public class MainWindow {
 				switch(selectionWeaponB) {
 				case "Sword":
 					currentWeaponB = new Sword();
+					break;
 				case "Bow and Arrow":
 					currentWeaponB = new BowAndArrow();
+					break;
 				case "No Weapon":
 					currentWeaponB = new NoWeapon();
+					break;
 				case "Frost Staff":
 					currentWeaponB = new FrostStaff();
+					break;
 				}
 				switch(selectionClassB) {
 				case "Knight":
 					currentCharacterB = new Knight(currentWeaponB);
+					break;
 				case "Troll":
 					currentCharacterB = new Troll(currentWeaponB);
+					break;
 				}
-				
 				System.out.println("Player II chose "+ selectionClassB +" with " + selectionWeaponB + "!");
 				lblCharImageB.setIcon(new ImageIcon(currentCharacterB.anzeigen()));
 				lblWeaponSlotB.setIcon(new ImageIcon(currentWeaponB.waffeAnzeigen()));
