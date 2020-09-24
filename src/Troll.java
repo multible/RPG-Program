@@ -5,6 +5,10 @@ public class Troll extends Character {
 		super(wb);
 	}
 	
+	public Troll() {
+		
+	}
+	
 	@Override
 	public String anzeigen() {
 		System.out.println("See a Troll");

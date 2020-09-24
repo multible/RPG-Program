@@ -5,6 +5,9 @@ public class Knight extends Character {
 		super(wb);
 	}
 	
+	public Knight() {
+	}
+
 	@Override
 	public String anzeigen() {
 		System.out.println("See a Knight");

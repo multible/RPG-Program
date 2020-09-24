@@ -10,7 +10,6 @@ public abstract class WeaponBehaviorClass {
 		prepare();
 		aim(target);
 		strike(target);
-		System.out.println("useWeapon abstrakte basisklasse");
 	}
 
 }

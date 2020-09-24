@@ -7,10 +7,15 @@ public class Character {
 		waffenEigenschaft = wb;
 	}
 	
+	//default character without weapon
+	public Character() {
+		waffenEigenschaft = new NoWeapon();
+	}
+	
 // default fight method //
 	public String fight(String target) {
 		waffenEigenschaft.draw();
-		for(int i=0;i<5;i++) {
+		for(int i=0;i<3;i++) {
 			waffenEigenschaft.useWeapon(target);
 		}
 		waffenEigenschaft.holster();
