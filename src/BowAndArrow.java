@@ -3,7 +3,7 @@ public class BowAndArrow extends WeaponBehaviorClass implements WeaponBehavior {
 
 	@Override
 	public String waffeAnzeigen() {
-		String anzeigen = "src\\res\\bow.jpg";
+		String anzeigen = "bow.jpg";
 		return anzeigen;
 	}
 

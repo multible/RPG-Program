@@ -11,8 +11,10 @@ public class Knight extends Character {
 	@Override
 	public String anzeigen() {
 		System.out.println("See a Knight");
-		String anzeigen = "src\\res\\knight.jpg";
+//		String anzeigen = "src\\res\\knight.jpg";
+		String anzeigen = "knight.jpg";
 		return anzeigen;
+		
 	}
 	
 	public String getRole() {

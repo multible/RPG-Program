@@ -3,7 +3,7 @@ public class Sword extends WeaponBehaviorClass implements WeaponBehavior{
 
 	@Override
 	public String waffeAnzeigen() {
-		String anzeigen = "src\\res\\sword.png";
+		String anzeigen = "sword.png";
 		return anzeigen;
 	}
 

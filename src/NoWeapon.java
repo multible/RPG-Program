@@ -3,7 +3,7 @@ public class NoWeapon extends WeaponBehaviorClass implements WeaponBehavior{
 
 	@Override
 	public String waffeAnzeigen() {
-		String anzeigen = "src\\res\\fist.png";
+		String anzeigen = "fist.png";
 		return anzeigen;
 	}
 

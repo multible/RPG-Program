@@ -12,7 +12,7 @@ public class Troll extends Character {
 	@Override
 	public String anzeigen() {
 		System.out.println("See a Troll");
-		String anzeigen = "src\\res\\troll.jpg";
+		String anzeigen = "troll.jpg";
 		return anzeigen;
 	}
 }

@@ -3,7 +3,7 @@ public class FrostStaff extends WeaponBehaviorClass implements WeaponBehavior{
 
 	@Override
 	public String waffeAnzeigen() {
-		String anzeigen = "src\\res\\froststaff.png";
+		String anzeigen = "froststaff.png";
 		return anzeigen;
 	}
 

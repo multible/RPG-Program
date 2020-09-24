@@ -133,8 +133,8 @@ public class MainWindow {
 					break;
 				}
 				System.out.println("Player I chose "+ selectionClassA +" with " + selectionWeaponA + "!");
-				lblCharImageA.setIcon(new ImageIcon(currentCharacterA.anzeigen()));
-				lblWeaponSlotA.setIcon(new ImageIcon(currentWeaponA.waffeAnzeigen()));
+				lblCharImageA.setIcon(new ImageIcon(getClass().getClassLoader().getResource(currentCharacterA.anzeigen())));
+				lblWeaponSlotA.setIcon(new ImageIcon(getClass().getClassLoader().getResource(currentWeaponA.waffeAnzeigen())));
 			}
 		});
 		
@@ -173,14 +173,16 @@ public class MainWindow {
 					break;
 				}
 				System.out.println("Player II chose "+ selectionClassB +" with " + selectionWeaponB + "!");
-				lblCharImageB.setIcon(new ImageIcon(currentCharacterB.anzeigen()));
-				lblWeaponSlotB.setIcon(new ImageIcon(currentWeaponB.waffeAnzeigen()));
+				lblCharImageB.setIcon(new ImageIcon(getClass().getClassLoader().getResource(currentCharacterB.anzeigen())));
+				lblWeaponSlotB.setIcon(new ImageIcon(getClass().getClassLoader().getResource(currentWeaponB.waffeAnzeigen())));
 			}
 		});
 		
 		btnConfirmB.setBounds(603, 535, 147, 23);
 		frmRpgfightsim.getContentPane().add(btnConfirmB);
 				
+		
+		ImageIcon lost = new ImageIcon(getClass().getClassLoader().getResource("skull.png"));
 		
 		JButton btnStartFight = new JButton("Fight!");
 		btnStartFight.addMouseListener(new MouseAdapter() {
@@ -197,16 +199,16 @@ public class MainWindow {
 				
 				if(rollA>rollB) {
 					System.out.println("Player I WINS");
-					lblCharImageB.setIcon(new ImageIcon("src\\res\\skull.png"));
+					lblCharImageB.setIcon(lost);
 				}
 				if(rollA==rollB) {
 					System.out.println("Both Players DIED");
-					lblCharImageA.setIcon(new ImageIcon("src\\res\\skull.png"));
-					lblCharImageB.setIcon(new ImageIcon("src\\res\\skull.png"));
+					lblCharImageA.setIcon(lost);
+					lblCharImageB.setIcon(lost);
 				}
 				if(rollA<rollB) {
 					System.out.println("Player II WINS");
-					lblCharImageA.setIcon(new ImageIcon("src\\res\\skull.png"));
+					lblCharImageA.setIcon(lost);
 				}
 			}
 		});
