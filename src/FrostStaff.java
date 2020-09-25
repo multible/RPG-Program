@@ -8,30 +8,30 @@ public class FrostStaff extends WeaponBehaviorClass implements WeaponBehavior{
 	}
 
 	@Override
-	public String draw() {
-		System.out.println("Draws Frost Staff!");
+	public String draw(String ownRole) {
+		System.out.println(ownRole + ": Draws Frost Staff!");
 		return null;
 	}
 
 	@Override
-	public String holster() {
-		System.out.println("Holsters Frost Staff!");
+	public String holster(String ownRole) {
+		System.out.println(ownRole + ": Holsters Frost Staff!");
 		return null;
 	}
 
 	@Override
-	void strike(String target) {
-		System.out.println("Casts magical spells at " + target );
+	void strike(String target,String ownRole) {
+		System.out.println(ownRole + ": Casts magical spells at " + target );
 	}
 
 	@Override
-	void aim(String target) {
-		System.out.println("Aims at " + target +" with a Frost Staff");	
+	void aim(String target,String ownRole) {
+		System.out.println(ownRole + ": Aims at " + target +" with a Frost Staff");	
 	}
 
 	@Override
-	void prepare() {
-		System.out.println("Scrolls through tome");	
+	void prepare(String ownRole) {
+		System.out.println(ownRole + ": Scrolls through tome");	
 	}
 
 }

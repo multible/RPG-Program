@@ -8,29 +8,29 @@ public class BowAndArrow extends WeaponBehaviorClass implements WeaponBehavior {
 	}
 
 	@Override
-	public String draw() {
-		System.out.println("Draws Bow and Arrows!");
+	public String draw(String ownRole) {
+		System.out.println(ownRole + ": Draws Bow and Arrows!");
 		return null;
 	}
 
 	@Override
-	public String holster() {
-		System.out.println("Holsters Bow and Arrows!");
+	public String holster(String ownRole) {
+		System.out.println(ownRole + ": Holsters Bow and Arrows!");
 		return null;
 	}
 
 	@Override
-	void strike(String target) {
-		System.out.println("Shoots arrows at " + target + ", this motherfucker");
+	void strike(String target,String ownRole) {
+		System.out.println(ownRole + ": Shoots arrows at " + target + ", this motherfucker");
 	}
 
 	@Override
-	void aim(String target) {
-		System.out.println("Aims with arrows at " + target + ", this motherfucker");
+	void aim(String target,String ownRole) {
+		System.out.println(ownRole + ": Aims with arrows at " + target + ", this motherfucker");
 	}
 
 	@Override
-	void prepare() {
-		System.out.println("Reloads arrows");
+	void prepare(String ownRole) {
+		System.out.println(ownRole + ": Reloads arrows");
 	}
 }

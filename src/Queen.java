@@ -18,6 +18,7 @@ public class Queen extends Character {
 		
 	}
 	
+	@Override
 	public String getRole() {
 		String queenRole = "Queen";
 		return queenRole;

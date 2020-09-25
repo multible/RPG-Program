@@ -8,29 +8,29 @@ public class NoWeapon extends WeaponBehaviorClass implements WeaponBehavior{
 	}
 
 	@Override
-	public String draw() {
-		System.out.println("Makes fist");
+	public String draw(String ownRole) {
+		System.out.println(ownRole + ": Makes fist");
 		return null;
 	}
 
 	@Override
-	public String holster() {
-		System.out.println("Puts fist in pocket!");
+	public String holster(String ownRole) {
+		System.out.println(ownRole + ": Puts fist in pocket!");
 		return null;
 	}
 
 	@Override
-	void prepare() {
-		System.out.println("Cracks knuckles!");
+	void prepare(String ownRole) {
+		System.out.println(ownRole + ": Cracks knuckles!");
 	}
 
 	@Override
-	void strike(String target) {
-		System.out.println("Slaps " + target + " in the face!");
+	void strike(String target,String ownRole) {
+		System.out.println(ownRole + ": Slaps " + target + " in the face!");
 	}
 
 	@Override
-	void aim(String target) {
-		System.out.println("Aims " + target + " at the face!");	
+	void aim(String target,String ownRole) {
+		System.out.println(ownRole + ": Aims " + target + " at the face!");	
 	}
 }

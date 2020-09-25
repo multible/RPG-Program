@@ -1,7 +1,7 @@
 // interface WeaponBehavior
 public interface WeaponBehavior {
-	public void useWeapon(String target);
+	public void useWeapon(String target, String ownRole);
 	public String waffeAnzeigen();
-	public String draw();
-	public String holster();
+	public String draw(String ownRole);
+	public String holster(String ownRole);
 }

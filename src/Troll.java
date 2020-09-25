@@ -15,4 +15,10 @@ public class Troll extends Character {
 		String anzeigen = "troll.jpg";
 		return anzeigen;
 	}
+	
+	@Override
+	public String getRole() {
+		String role = "Troll";
+		return role;
+	}
 }

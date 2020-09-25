@@ -206,8 +206,8 @@ public class MainWindow {
 			public void mouseClicked(MouseEvent e) {
 				
 				System.out.println("Fight Started!");
-				currentCharacterA.fight(selectionClassA);
-				currentCharacterB.fight(selectionClassB);
+				currentCharacterA.fight(selectionClassB,currentCharacterA.getRole());
+				currentCharacterB.fight(selectionClassA,currentCharacterB.getRole());
 				int rollA = ThreadLocalRandom.current().nextInt(1, 100 + 1);
 				int rollB = ThreadLocalRandom.current().nextInt(1, 100 + 1);
 				System.out.println("rollA: " + rollA);

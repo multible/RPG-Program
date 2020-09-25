@@ -8,29 +8,29 @@ public class Sword extends WeaponBehaviorClass implements WeaponBehavior{
 	}
 
 	@Override
-	public String draw() {
-		System.out.println("Draws Sword!");
+	public String draw(String ownRole) {
+		System.out.println(ownRole + ": Draws Sword!");
 		return null;
 	}
 
 	@Override
-	public String holster() {
-		System.out.println("Holsters Sword!");
+	public String holster(String ownRole) {
+		System.out.println(ownRole + ": Holsters Sword!");
 		return null;
 	}
 
 	@Override
-	void strike(String target) {
-		System.out.println("Hits " + target +" with a Sword");
+	void strike(String target, String ownRole) {
+		System.out.println(ownRole + ": Hits " + target +" with a Sword");
 	}
 
 	@Override
-	void aim(String target) {
-		System.out.println("Aims at " + target +" with a Sword");	
+	void aim(String target,String ownRole) {
+		System.out.println(ownRole +": Aims at " + target +" with a Sword");	
 	}
 
 	@Override
-	void prepare() {
-		System.out.println("Fondles the blade");	
+	void prepare(String ownRole) {
+		System.out.println(ownRole + ": Fondles the blade");	
 	}
 }

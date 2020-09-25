@@ -13,12 +13,12 @@ public class Character {
 	}
 	
 // default fight method //
-	public String fight(String target) {
-		waffenEigenschaft.draw();
+	public String fight(String target,String ownRole) {
+		waffenEigenschaft.draw(ownRole);
 		for(int i=0;i<3;i++) {
-			waffenEigenschaft.useWeapon(target);
+			waffenEigenschaft.useWeapon(target,ownRole);
 		}
-		waffenEigenschaft.holster();
+		waffenEigenschaft.holster(ownRole);
 		return null;
 	}
 	
@@ -34,5 +34,9 @@ public class Character {
 	public String anzeigen() {
 		System.out.println("See Basic Character");
 		return null;
+	}
+	public String getRole() {
+		String basicRole = "Basic";
+		return basicRole;
 	}
 }
