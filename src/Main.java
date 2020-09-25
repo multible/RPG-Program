@@ -9,6 +9,6 @@ public class Main {
 		
 		knight.fight("deinen vater");
 		
-		knight.getCurrentWeapon().useWeapon("deine oma");
+//		knight.getCurrentWeapon().useWeapon("deine oma");
 	}
 }

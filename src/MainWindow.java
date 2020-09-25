@@ -77,6 +77,8 @@ public class MainWindow {
 		choiceClassA.setBounds(25, 489, 127, 20);
 		choiceClassA.add("Knight");
 		choiceClassA.add("Troll");
+		choiceClassA.add("King");
+		choiceClassA.add("Queen");
 		frmRpgfightsim.getContentPane().add(choiceClassA);
 		
 		Choice choiceWeaponA = new Choice();
@@ -91,6 +93,8 @@ public class MainWindow {
 		choiceClassB.setBounds(520, 489, 127, 20);
 		choiceClassB.add("Knight");
 		choiceClassB.add("Troll");
+		choiceClassB.add("King");
+		choiceClassB.add("Queen");
 		frmRpgfightsim.getContentPane().add(choiceClassB);
 		
 		Choice choiceWeaponB = new Choice();
@@ -131,6 +135,12 @@ public class MainWindow {
 				case "Troll":
 					currentCharacterA = new Troll(currentWeaponA);
 					break;
+				case "Queen":
+					currentCharacterA = new Queen(currentWeaponA);
+					break;
+				case "King":
+					currentCharacterA = new King(currentWeaponA);
+					break;
 				}
 				System.out.println("Player I chose "+ selectionClassA +" with " + selectionWeaponA + "!");
 				lblCharImageA.setIcon(new ImageIcon(getClass().getClassLoader().getResource(currentCharacterA.anzeigen())));
@@ -170,6 +180,12 @@ public class MainWindow {
 					break;
 				case "Troll":
 					currentCharacterB = new Troll(currentWeaponB);
+					break;
+				case "Queen":
+					currentCharacterB = new Queen(currentWeaponA);
+					break;
+				case "King":
+					currentCharacterB = new King(currentWeaponA);
 					break;
 				}
 				System.out.println("Player II chose "+ selectionClassB +" with " + selectionWeaponB + "!");
