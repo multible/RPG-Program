@@ -182,10 +182,10 @@ public class MainWindow {
 					currentCharacterB = new Troll(currentWeaponB);
 					break;
 				case "Queen":
-					currentCharacterB = new Queen(currentWeaponA);
+					currentCharacterB = new Queen(currentWeaponB);
 					break;
 				case "King":
-					currentCharacterB = new King(currentWeaponA);
+					currentCharacterB = new King(currentWeaponB);
 					break;
 				}
 				System.out.println("Player II chose "+ selectionClassB +" with " + selectionWeaponB + "!");
