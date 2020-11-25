@@ -33,4 +33,9 @@ public class BowAndArrow extends WeaponBehaviorClass implements WeaponBehavior {
 	void prepare(String ownRole) {
 		System.out.println(ownRole + ": Reloads arrows");
 	}
+
+	@Override
+	public String getName() {
+		return "Bow and Arrow";
+	}
 }

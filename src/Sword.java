@@ -33,4 +33,10 @@ public class Sword extends WeaponBehaviorClass implements WeaponBehavior{
 	void prepare(String ownRole) {
 		System.out.println(ownRole + ": Fondles the blade");	
 	}
+
+	@Override
+	public String getName() 
+	{
+		return "Sword";
+	}
 }

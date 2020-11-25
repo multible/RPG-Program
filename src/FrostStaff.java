@@ -34,4 +34,9 @@ public class FrostStaff extends WeaponBehaviorClass implements WeaponBehavior{
 		System.out.println(ownRole + ": Scrolls through tome");	
 	}
 
+	@Override
+	public String getName() {
+		return "Frost Staff";
+	}
+
 }

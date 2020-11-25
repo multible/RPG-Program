@@ -11,14 +11,17 @@ import javax.swing.JLabel;
 
 public class MainWindow {
 
-	static String selectionClassB = null;
-	static String selectionClassA = null;
+//	static String selectionClassB = null;
+//	static String selectionClassA = null;
+//	
+//	static WeaponBehavior currentWeaponA = null;
+//	static WeaponBehavior currentWeaponB = null;
+//	
+//	static Character currentCharacterA = null;
+//	static Character currentCharacterB = null;
 	
-	static WeaponBehavior currentWeaponA = null;
-	static WeaponBehavior currentWeaponB = null;
-	
-	static Character currentCharacterA = null;
-	static Character currentCharacterB = null;
+	Character char1;
+	Character char2;
 	
 	private JFrame frmRpgfightsim;
 
@@ -111,40 +114,45 @@ public class MainWindow {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				
-				selectionClassA = choiceClassA.getSelectedItem();
-				String selectionWeaponA = choiceWeaponA.getSelectedItem();				
+//				selectionClassA = choiceClassA.getSelectedItem();
+//				String selectionWeaponA = choiceWeaponA.getSelectedItem();				
+//				
+//				switch(selectionWeaponA) {
+//				case "Sword":
+//					currentWeaponA = new Sword();
+//					break;
+//				case "Bow and Arrow":
+//					currentWeaponA = new BowAndArrow();
+//					break;
+//				case "No Weapon":
+//					currentWeaponA = new NoWeapon();
+//					break;
+//				case "Frost Staff":
+//					currentWeaponA = new FrostStaff();
+//					break;
+//				}
+//				switch(selectionClassA) {
+//				case "Knight":
+//					currentCharacterA = new Knight(currentWeaponA);
+//					break;
+//				case "Troll":
+//					currentCharacterA = new Troll(currentWeaponA);
+//					break;
+//				case "Queen":
+//					currentCharacterA = new Queen(currentWeaponA);
+//					break;
+//				case "King":
+//					currentCharacterA = new King(currentWeaponA);
+//					break;
+//				}
 				
-				switch(selectionWeaponA) {
-				case "Sword":
-					currentWeaponA = new Sword();
-					break;
-				case "Bow and Arrow":
-					currentWeaponA = new BowAndArrow();
-					break;
-				case "No Weapon":
-					currentWeaponA = new NoWeapon();
-					break;
-				case "Frost Staff":
-					currentWeaponA = new FrostStaff();
-					break;
-				}
-				switch(selectionClassA) {
-				case "Knight":
-					currentCharacterA = new Knight(currentWeaponA);
-					break;
-				case "Troll":
-					currentCharacterA = new Troll(currentWeaponA);
-					break;
-				case "Queen":
-					currentCharacterA = new Queen(currentWeaponA);
-					break;
-				case "King":
-					currentCharacterA = new King(currentWeaponA);
-					break;
-				}
-				System.out.println("Player I chose "+ selectionClassA +" with " + selectionWeaponA + "!");
-				lblCharImageA.setIcon(new ImageIcon(getClass().getClassLoader().getResource(currentCharacterA.anzeigen())));
-				lblWeaponSlotA.setIcon(new ImageIcon(getClass().getClassLoader().getResource(currentWeaponA.waffeAnzeigen())));
+				HeroFactory test = new HeroFactory();
+				
+				char1 = test.chooseChar(choiceClassA.getSelectedItem(), choiceWeaponA.getSelectedItem());
+				
+				System.out.println("Player I chose "+ char1.getRole() +" with " + test.getWeapon().getName() + "!");
+				lblCharImageA.setIcon(new ImageIcon(getClass().getClassLoader().getResource(test.getChar().anzeigen())));
+				lblWeaponSlotA.setIcon(new ImageIcon(getClass().getClassLoader().getResource(test.getWeapon().waffeAnzeigen())));
 			}
 		});
 		
@@ -157,40 +165,45 @@ public class MainWindow {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				
-				selectionClassB = choiceClassB.getSelectedItem();
-				String selectionWeaponB = choiceWeaponB.getSelectedItem();
+//				selectionClassB = choiceClassB.getSelectedItem();
+//				String selectionWeaponB = choiceWeaponB.getSelectedItem();
+//				
+//				switch(selectionWeaponB) {
+//				case "Sword":
+//					currentWeaponB = new Sword();
+//					break;
+//				case "Bow and Arrow":
+//					currentWeaponB = new BowAndArrow();
+//					break;
+//				case "No Weapon":
+//					currentWeaponB = new NoWeapon();
+//					break;
+//				case "Frost Staff":
+//					currentWeaponB = new FrostStaff();
+//					break;
+//				}
+//				switch(selectionClassB) {
+//				case "Knight":
+//					currentCharacterB = new Knight(currentWeaponB);
+//					break;
+//				case "Troll":
+//					currentCharacterB = new Troll(currentWeaponB);
+//					break;
+//				case "Queen":
+//					currentCharacterB = new Queen(currentWeaponB);
+//					break;
+//				case "King":
+//					currentCharacterB = new King(currentWeaponB);
+//					break;
+//				}
 				
-				switch(selectionWeaponB) {
-				case "Sword":
-					currentWeaponB = new Sword();
-					break;
-				case "Bow and Arrow":
-					currentWeaponB = new BowAndArrow();
-					break;
-				case "No Weapon":
-					currentWeaponB = new NoWeapon();
-					break;
-				case "Frost Staff":
-					currentWeaponB = new FrostStaff();
-					break;
-				}
-				switch(selectionClassB) {
-				case "Knight":
-					currentCharacterB = new Knight(currentWeaponB);
-					break;
-				case "Troll":
-					currentCharacterB = new Troll(currentWeaponB);
-					break;
-				case "Queen":
-					currentCharacterB = new Queen(currentWeaponB);
-					break;
-				case "King":
-					currentCharacterB = new King(currentWeaponB);
-					break;
-				}
-				System.out.println("Player II chose "+ selectionClassB +" with " + selectionWeaponB + "!");
-				lblCharImageB.setIcon(new ImageIcon(getClass().getClassLoader().getResource(currentCharacterB.anzeigen())));
-				lblWeaponSlotB.setIcon(new ImageIcon(getClass().getClassLoader().getResource(currentWeaponB.waffeAnzeigen())));
+				HeroFactory test = new HeroFactory();
+				
+				char2 = test.chooseChar(choiceClassB.getSelectedItem(), choiceWeaponB.getSelectedItem());
+				
+				System.out.println("Player II chose "+ char2.getRole() +" with " + test.getWeapon().getName() + "!");
+				lblCharImageB.setIcon(new ImageIcon(getClass().getClassLoader().getResource(test.getChar().anzeigen())));
+				lblWeaponSlotB.setIcon(new ImageIcon(getClass().getClassLoader().getResource(test.getWeapon().waffeAnzeigen())));
 			}
 		});
 		
@@ -206,8 +219,8 @@ public class MainWindow {
 			public void mouseClicked(MouseEvent e) {
 				
 				System.out.println("Fight Started!");
-				currentCharacterA.fight(selectionClassB,currentCharacterA.getRole());
-				currentCharacterB.fight(selectionClassA,currentCharacterB.getRole());
+				char1.fight(char2.getRole(),char1.getRole());
+				char2.fight(char1.getRole(),char2.getRole());
 				int rollA = ThreadLocalRandom.current().nextInt(1, 100 + 1);
 				int rollB = ThreadLocalRandom.current().nextInt(1, 100 + 1);
 				System.out.println("rollA: " + rollA);

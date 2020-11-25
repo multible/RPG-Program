@@ -33,4 +33,9 @@ public class NoWeapon extends WeaponBehaviorClass implements WeaponBehavior{
 	void aim(String target,String ownRole) {
 		System.out.println(ownRole + ": Aims " + target + " at the face!");	
 	}
+
+	@Override
+	public String getName() {
+		return "Fist";
+	}
 }
